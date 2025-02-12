@@ -1,25 +1,14 @@
-const Item = ({ name, quantity, category }) => (
-  <li className="mb-4 p-4 bg-white rounded-lg shadow-md">
-    <span className="text-lg font-semibold">{name}</span>
-    <div className="flex items-center text-sm text-gray-600">
-      <span>
-        Quantity: <span className="font-medium">{quantity}</span>
-      </span>
-      <span
-        className={`ml-4 ${
-          category === "dairy"
-            ? "text-blue-500"
-            : category === "produce"
-              ? "text-green-500"
-              : category === "meat"
-                ? "text-red-500"
-                : "text-gray-500"
-        }`}
-      >
-        {category}
-      </span>
-    </div>
-  </li>
-);
+// /app/week-3/item.js
+import React from "react";
+
+const Item = ({ name, quantity, category }) => {
+  return (
+    <li className="p-4 bg-gray-100 mb-2 rounded-md">
+      <p className="font-bold text-xl">{name}</p>
+      <p>Quantity: {quantity}</p>
+      <p>Category: {category}</p>
+    </li>
+  );
+};
 
 export default Item;
